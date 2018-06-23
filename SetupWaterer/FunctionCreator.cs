@@ -19,10 +19,12 @@ namespace SetupWaterer
 
     {
         #region fields
-        private string clientId = "***REMOVED***";
-        private string clientSecret = "***REMOVED***";
-        private string tenant = "***REMOVED***";
-        private string subscription = "***REMOVED***";
+        //Create an service principal in azure using 
+        //az ad sp create-for-rbac --name ServicePrincipalName --password PASSWORD
+        private string clientId = "[id of service principal]";
+        private string clientSecret = "[PASSWORD]";
+        private string tenant = "[tenant in azure]";
+        private string subscription = "[azure subscription guid]";
         #endregion
 
         public string ClientId { get { return clientId; }}
