@@ -19,10 +19,12 @@ namespace SetupWaterer
 
     {
         #region fields
-        private string clientId = "fd4e9b22-620f-4593-9cf9-7d6f008e5813";
-        private string clientSecret = "FuncAzFunction";
-        private string tenant = "8003b92e-e89f-4e34-bfd9-aef4d70a3c1f";
-        private string subscription = "d24f33c8-abb9-434a-8414-97ea4c2afed6";
+        //Create an service principal in azure using 
+        //az ad sp create-for-rbac --name ServicePrincipalName --password PASSWORD
+        private string clientId = "[id of service principal]";
+        private string clientSecret = "[PASSWORD]";
+        private string tenant = "[tenant in azure]";
+        private string subscription = "[azure subscription guid]";
         #endregion
 
         public string ClientId { get { return clientId; }}
